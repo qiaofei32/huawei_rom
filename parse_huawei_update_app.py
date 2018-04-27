@@ -124,7 +124,7 @@ class UpdateAppParser:
 		block_size_hw_int = unpack('<H', block_size_hw)[0]
 		
 		# Grab the checksum of the file
-		remaining_header_len = header_len_int - (4 + 4 + 4 + 8 + 4 + 4 + 16 + 16 + 32 + 2 + 2 + 2) # AGO
+		remaining_header_len = header_len_int - (4 + 4 + 4 + 8 + 4 + 4 + 16 + 16 + 32 + 2 + 2 + 2)
 		if remaining_header_len:
 			buffer = self.update_app.read(remaining_header_len)
 			checksum = format_hex(buffer)
